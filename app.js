@@ -7,10 +7,6 @@ var GroceryList = (props) => (
   </ul>
 );
 
-// Static prop-taking version; stateless component
-// var GroceryListItem = (props) => (
-//   <li>{props.item[0]}</li>
-// );
 
 class GroceryListItem extends React.Component {
   constructor (props) {
@@ -26,18 +22,11 @@ class GroceryListItem extends React.Component {
     });
   }
 
-  /*
-  render() {
+  // Static prop-taking version; stateless component
+  // var GroceryListItem = (props) => (
+  //   <li>{props.item[0]}</li>
+  // );
 
-    var style = {
-      textDecoration: this.state.done ? 'line-through' : 'none'
-    };
-
-    return (
-      <li style={style} onClick={this.onListItemClick.bind(this)}>{this.props.todo}</li>
-    );
-  }
-  */
   render () {
     var style = {
       fontWeight: this.state.hover ? 'bold' : 'normal'
